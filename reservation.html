@@ -47,20 +47,20 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="reserve-phone">Phone Number</label>
+                                <label for="reserve-phone">Date</label>
                                 <input type="text" class="form-control" id="reserve-phone">
                             </div>
 
                             <div class="form-group">
-                                <label for="reserve-email">Email</label>
+                                <label for="reserve-email">Time</label>
                                 <input type="text" class="form-control" id="reserve-email">
                             </div>
 
                             <div class="form-group">
-                                <label for="reserve-unique-id">Unique ID</label>
+                                <label for="reserve-unique-id">Party</label>
                                 <input type="text" class="form-control" id="reserve-unique-id">
                             </div>
-
+                            
                             <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
 
@@ -96,15 +96,13 @@
 
         // Here we grab the form elements
         var newReservation = {
-            customerName: $("#reserve-name").val().trim(),
-            phoneNumber: $("#reserve-phone").val().trim(),
-            customerEmail: $("#reserve-email").val().trim(),
-            customerID: $("#reserve-unique-id").val().trim()
+            name: $("#reserve-name").val().trim(),
+            date: $("#reserve-phone").val().trim(),
+            time: $("#reserve-email").val().trim(),
+            partyOf: $("#reserve-unique-id").val().trim()
         };
 
         console.log(newReservation);
-        var reserveJSON = JSON.stringify(newReservation);
-        console.log(reserveJSON);
 
         // This line is the magic. It"s very similar to the standard ajax function we used.
         // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
