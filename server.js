@@ -66,8 +66,6 @@ app.get("/reserve", function (req, res) {
 
        console.log(newreservation);
 
-       reservation.push(newreservation);
-
        res.json(newreservation);
 
        if(reservation.length < 3) {
